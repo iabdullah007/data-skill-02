@@ -1,0 +1,22 @@
+version: 2
+
+seeds:
+  - name: Invoices
+    config:
+      # Override column types
+      column_types:
+        "Invoice Number": int4
+        "Invoice Date": date
+        "Amount": float8
+        "Paid On": timestamp
+
+  - name: LineItems
+    config:
+      # Override column types
+      column_types:
+        "Invoice Number": int4
+        "Entity Type": text
+        "Purchase Item": text
+        "Unit Price": float8
+        "Quantity": int4
+        "Customer Id": varchar(20)

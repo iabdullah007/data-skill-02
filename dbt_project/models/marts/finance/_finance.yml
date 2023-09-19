@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: dim_finance__final_table
+    description: |
+      The provided schema file depicts the meticulously constructed ultimate table that emerges from various intermediate stages.
+      Each intermediate step/transformation is extracted and consolidated into an intermediate view, subsequently interconnected to form this final resultant table.
+    
+    columns:
+      - name: customer_id
+        description: Customer Identification Nr
+        tests:
+          - not_null
+      
+      - name: invoice_number
+        description: Invoice Number
+        tests:
+          - not_null
+      
+      - name: entity_type
+        description: Entity type of purchased line item
+      
+      - name: purchase_item
+        description: Purchased item
+      
+      - name: unit_price
+        description: Price of a single unit
+      
+      - name: quantity
+        description: Nr of items purchased
+      
+      - name: amount
+        description: Total amount of purchased items
+      
+      - name: paid_on
+        description: Date and time when paid
+      
+      - name: invoice_date
+        description: Date when invoice was created
+
+      - name: expire_on
+        description: Date and time of expiry
+    
+      

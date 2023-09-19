@@ -1,0 +1,25 @@
+config:
+    send_anonymous_usage_stats: False
+    use_colors: True
+
+dbt_project:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5438
+      user: "postgres"
+      password: "postgres"
+      database: raw
+      schema: dev
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5438
+      user: "postgres"
+      password: "postgres"
+      database: raw
+      schema: analytics
+  target: dev
